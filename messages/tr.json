@@ -1,0 +1,89 @@
+{
+  "Navbar": {
+    "services": "Hizmetler",
+    "projects": "Projeler",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "cta": "BİZE YAZIN"
+  },
+  "Hero": {
+    "badge": "Yazılımın Geleceği Burada",
+    "title": "Fikirlerinizi Dijital",
+    "titleHighlight": "Gerçekliğe Dönüştürüyoruz",
+    "description": "Modern teknolojilerle ölçeklenebilir, hızlı ve güvenli yazılım çözümleri üretiyoruz. İşletmenizi bir sonraki seviyeye taşıyın.",
+    "ctaPrimary": "Projeye Başla",
+    "ctaSecondary": "Referansları Gör"
+  },
+  "LogoCloud": {
+    "title": "Sektörün öncüleri bize güveniyor"
+  },
+  "About": {
+    "title": "Kod yazmıyoruz, işinizi büyütüyoruz.",
+    "description": "Geleneksel ajansların aksine, biz kendimizi ekibinizin bir parçası olarak görüyoruz. Başarınız, başarımızdır.",
+    "stat1": "Tamamlanan Proje",
+    "stat2": "Müşteri Memnuniyeti",
+    "stat3": "Yıllık Deneyim"
+  },
+  "Services": {
+    "title": "Uçtan Uca Dijital Çözümler",
+    "subtitle": "HİZMETLERİMİZ",
+    "webTitle": "Web Geliştirme",
+    "webDesc": "Yüksek performanslı, SEO uyumlu ve modern web uygulamaları.",
+    "mobileTitle": "Mobil Uygulama",
+    "mobileDesc": "iOS ve Android için kusursuz çalışan yerel (native) deneyimler.",
+    "uiTitle": "UI/UX Tasarım",
+    "uiDesc": "Kullanıcı odaklı, estetik ve dönüşüm getiren arayüzler.",
+    "consultingTitle": "Teknoloji Danışmanlığı",
+    "consultingDesc": "Dijital dönüşümünüz için stratejik yol haritası.",
+    "longDescription": "Dijital dünyada iz bırakmak için ihtiyacınız olan her şey burada. Web geliştirmeden mobil uygulamalara, kullanıcı deneyimi tasarımından danışmanlığa kadar uçtan uca çözümler sunuyoruz. Sizin vizyonunuz, bizim teknolojimizle hayat buluyor."
+  },
+  "Work": {
+    "subtitle": "SEÇİLMİŞ İŞLER",
+    "title": "Dijital Dönüşüm Hikayeleri",
+    "viewCase": "İncele"
+  },
+  "Testimonials": {
+    "title": "Müşterilerimiz Ne Diyor?",
+    "role1": "CTO, FinTech Corp",
+    "comment1": "Ekip, projemizi beklentimizin ötesinde bir hızla teslim etti. Kod kalitesi ve iletişim harikaydı.",
+    "role2": "Kurucu, E-Ticaret Girişimi",
+    "comment2": "Sadece bir yazılım şirketi değil, gerçek bir iş ortağı. Fikirlerimize değer kattılar.",
+    "role3": "Pazarlama Müdürü",
+    "comment3": "SEO uyumlu altyapıları sayesinde trafiğimiz %200 arttı. Kesinlikle tavsiye ediyorum."
+  },
+  "FeaturedWork": {
+    "title": "Projelerimiz.",
+    "subtitle": "Teknoloji ve tasarımı birleştirerek hayata geçirdiğimiz dijitalürünler.",
+    "eyebrow": "// Selected Works"
+  },
+  "CTASection": {
+    "title": "Bir sonraki başarı hikayesi sizin olsun.",
+    "description": "Projenizi hayata geçirmek için hazırsanız, biz de hazırız.",
+    "button": "Bizimle İletişime Geçin"
+  },
+  "Footer": {
+    "eyebrow": "// Next Step",
+    "headlineStrong": "BİRLİKTE",
+    "headlineLight": "ÜRETELİM.",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Hizmet Şartları",
+    "cta": "BİZİMLE İLETİŞİME GEÇİN",
+    "contact": "İletişim",
+    "social": "Sosyal",
+    "navigation": "Navigasyon",
+    "work": "Projeler",
+    "about": "Hakkımızda"
+  },
+  "Contact": {
+    "title": "Birlikte Harika Bir Şeyler Başlatalım.",
+    "subtitle": "Projenizden bahsedin, size en uygun dijital çözümü sunalım.",
+    "emailLabel": "E-posta Adresiniz",
+    "nameLabel": "Adınız Soyadınız",
+    "messageLabel": "Projeniz Hakkında (Bütçe, Hedefler, Zamanlama)",
+    "sendButton": "Gönder",
+    "infoTitle": "İletişim Bilgileri",
+    "address": "Levent, İstanbul - Teknoloji Üssü",
+    "email": "hello@fourlantis.com",
+    "socialTitle": "Bizi Takip Edin"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "Navbar": {
+    "services": "Services",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "GET IN TOUCH"
+  },
+  "Hero": {
+    "badge": "The Future of Software",
+    "title": "Turning Ideas Into",
+    "titleHighlight": "Digital Reality",
+    "description": "We build scalable, fast, and secure software solutions with modern technologies. Take your business to the next level.",
+    "ctaPrimary": "Start Project",
+    "ctaSecondary": "View Work"
+  },
+  "LogoCloud": {
+    "title": "Trusted by industry leaders"
+  },
+  "About": {
+    "title": "We don't just write code, we build businesses.",
+    "description": "Unlike traditional agencies, we see ourselves as part of your team. Your success is our success.",
+    "stat1": "Projects Completed",
+    "stat2": "Client Satisfaction",
+    "stat3": "Years Experience"
+  },
+  "FeaturedWork": {
+    "title": "Projects.",
+    "subtitle": "Digital products we bring to life by combining technology and design.",
+    "eyebrow": "// Selected Works"
+  },
+  "Services": {
+    "title": "End-to-End Digital Solutions",
+    "subtitle": "OUR SERVICES",
+    "webTitle": "Web Development",
+    "webDesc": "High-performance, SEO-friendly, and modern web applications.",
+    "mobileTitle": "Mobile Apps",
+    "mobileDesc": "Seamless native experiences for iOS and Android.",
+    "uiTitle": "UI/UX Design",
+    "uiDesc": "User-centric, aesthetic interfaces that drive conversion.",
+    "consultingTitle": "Tech Consulting",
+    "consultingDesc": "Strategic roadmap for your digital transformation."
+  },
+  "Work": {
+    "subtitle": "FEATURED WORK",
+    "title": "Digital Transformation Stories",
+    "viewCase": "View Case Study"
+  },
+  "Testimonials": {
+    "title": "What Our Clients Say",
+    "role1": "CTO, FinTech Corp",
+    "comment1": "The team delivered beyond our expectations. Code quality and communication were excellent.",
+    "role2": "Founder, E-Commerce Startup",
+    "comment2": "Not just a software agency, but a true partner. They added value to our ideas.",
+    "role3": "Marketing Manager",
+    "comment3": "Our traffic increased by 200% thanks to their SEO-friendly infrastructure. Highly recommended."
+  },
+  "CTASection": {
+    "title": "Let your project be the next success story.",
+    "description": "If you are ready to bring your project to life, so are we.",
+    "button": "Get in Touch"
+  },
+  "Footer": {
+    "eyebrow": "// Next Step",
+    "headlineStrong": "BİRLİKTE",
+    "headlineLight": "ÜRETELİM.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cta": "Get in Touch",
+    "contact": "Contact",
+    "social": "Social",
+    "navigation": "Navigation",
+    "work": "Works",
+    "about": "About"
+  },
+  "Contact": {
+    "title": "Let's Start Something Great Together.",
+    "subtitle": "Tell us about your project, let's craft the perfect digital solution.",
+    "emailLabel": "Your Email",
+    "nameLabel": "Your Name",
+    "messageLabel": "About Your Project (Budget, Goals, Timeline)",
+    "sendButton": "Send Message",
+    "infoTitle": "Contact Info",
+    "address": "Levent, Istanbul - Tech Base",
+    "email": "hello@fourlantis.com",
+    "socialTitle": "Follow Us"
+  }
+}
