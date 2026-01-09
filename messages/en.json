@@ -26,12 +26,10 @@
   },
   "FeaturedWork": {
     "title": "Projects.",
-    "subtitle": "Digital products we bring to life by combining technology and design.",
-    "eyebrow": "// Selected Works"
+    "subtitle": "Digital products we bring to life by combining technology and design."
   },
   "Services": {
     "title": "End-to-End Digital Solutions",
-    "subtitle": "OUR SERVICES",
     "webTitle": "Web Development",
     "webDesc": "High-performance, SEO-friendly, and modern web applications.",
     "mobileTitle": "Mobile Apps",
@@ -61,7 +59,6 @@
     "button": "Get in Touch"
   },
   "Footer": {
-    "eyebrow": "// Next Step",
     "headlineStrong": "BİRLİKTE",
     "headlineLight": "ÜRETELİM.",
     "privacy": "Privacy Policy",
@@ -71,7 +68,8 @@
     "social": "Social",
     "navigation": "Navigation",
     "work": "Works",
-    "about": "About"
+    "about": "About",
+    "faq": "FAQ"
   },
   "Contact": {
     "title": "Let's Start Something Great Together.",

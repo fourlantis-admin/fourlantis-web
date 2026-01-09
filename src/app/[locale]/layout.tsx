@@ -5,6 +5,18 @@ import { routing } from "@/i18n/routing";
 import "@/app/globals.css";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import { GrainyBackground } from "@/components/GrainyBackground";
+import { Montserrat } from "next/font/google";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import CustomCursor from "@/components/CustomCursor";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-montserrat",
+});
+
 export default async function LocaleLayout({
   children,
   params,
@@ -21,11 +33,16 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body className="mx-auto w-full bg-[#030303] px-4 text-white antialiased sm:px-6 lg:px-12">
+    <html lang={locale} className={`${montserrat.variable}`}>
+      <body className="font-montserrat mx-auto w-full bg-[#02040a] px-4 text-white antialiased sm:px-6 lg:px-12">
         <NextIntlClientProvider messages={messages}>
           <GrainyBackground />
-          <SmoothScrollProvider>{children}</SmoothScrollProvider>
+          <SmoothScrollProvider>
+            <Navbar />
+            <CustomCursor />
+            {children}
+            <Footer />
+          </SmoothScrollProvider>
         </NextIntlClientProvider>
       </body>
     </html>

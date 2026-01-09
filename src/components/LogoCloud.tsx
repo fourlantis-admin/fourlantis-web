@@ -16,15 +16,15 @@ export default function LogoCloud() {
   const t = useTranslations("LogoCloud");
 
   return (
-    <section className="relative overflow-hidden bg-transparent py-24">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+    <section className="relative overflow-hidden bg-transparent py-8 md:py-24 lg:py-32">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent" />
 
-      <div className="container mx-auto mb-16 px-4 text-center">
+      <div className="container mx-auto mb-20 px-4 text-center">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-mono text-[10px] font-medium tracking-[0.5em] text-white/30 uppercase"
+          className="font-mono text-[10px] font-medium tracking-[0.5em] text-cyan-500/40 uppercase"
         >
           {t("title") || "TRUSTED BY INDUSTRY LEADERS"}
         </motion.p>
@@ -32,26 +32,23 @@ export default function LogoCloud() {
 
       <div className="relative flex w-full overflow-hidden">
         <motion.div
-          className="flex flex-none items-center gap-16 pr-16 md:gap-32 md:pr-32"
+          className="flex flex-none transform-gpu items-center gap-20 pr-20 will-change-transform md:gap-40 md:pr-40"
           animate={{ x: ["0%", "-50%"] }}
           transition={{
             ease: "linear",
-            duration: 25,
+            duration: 35,
             repeat: Infinity,
           }}
         >
           {[...LOGOS, ...LOGOS, ...LOGOS, ...LOGOS].map((logo, index) => (
             <span
               key={index}
-              className="cursor-default text-2xl font-bold tracking-tighter text-white/20 transition-all duration-500 select-none hover:scale-110 hover:text-white md:text-4xl"
+              className="cursor-default text-3xl font-semibold tracking-tighter text-white/10 antialiased transition-all duration-700 select-none hover:text-cyan-400/60 md:text-5xl"
             >
               {logo}
             </span>
           ))}
         </motion.div>
-
-        <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-40 bg-gradient-to-r from-[#030303] to-transparent" />
-        <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-40 bg-gradient-to-l from-[#030303] to-transparent" />
       </div>
 
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/5 to-transparent" />

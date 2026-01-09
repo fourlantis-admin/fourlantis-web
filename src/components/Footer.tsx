@@ -9,65 +9,17 @@ import {
 } from "react-icons/fa6";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import { useIsMobile } from "@/hooks/use-is-mobile";
 
 export default function Footer() {
   const t = useTranslations("Footer");
+  const isMobile = useIsMobile();
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative z-10 w-full overflow-hidden bg-transparent pt-20 pb-10">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent" />
-
-      <div className="pointer-events-none absolute -top-20 -right-20 h-[400px] w-[400px] rounded-full bg-indigo-500/5 blur-[120px]" />
-
+    <footer className="relative z-10 w-full overflow-hidden bg-transparent py-8">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col items-start justify-between gap-12 lg:flex-row lg:items-end">
-          <div className="max-w-4xl">
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="mb-6 block font-mono text-[10px] tracking-[0.5em] text-cyan-500 uppercase"
-            >
-              {t("eyebrow")}
-            </motion.span>
-
-            <motion.h2
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-[12vw] leading-[0.9] font-black tracking-tighter text-white md:text-[8vw]"
-            >
-              {t("headlineStrong")}
-              <br />
-              <span className="font-light text-white/20 italic">
-                {t("headlineLight")}
-              </span>
-            </motion.h2>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="inline-block"
-          >
-            <Link
-              href="/contact"
-              className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 px-12 py-6 text-sm font-bold tracking-[0.2em] text-white transition-all hover:border-cyan-400/50"
-            >
-              <span className="relative z-10 flex items-center gap-3 font-['Syne'] transition-colors duration-500 group-hover:text-black">
-                {t("cta")}
-                <span className="text-xl transition-transform duration-500 group-hover:translate-x-2">
-                  →
-                </span>
-              </span>
-
-              <div className="absolute inset-0 z-0 translate-y-full bg-white transition-transform duration-500 ease-[0.76,0,0.24,1] group-hover:translate-y-0" />
-            </Link>
-          </motion.div>
-        </div>
-
-        <div className="mt-32 grid grid-cols-1 gap-16 border-t border-white/5 pt-16 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 border-t border-white/15 pt-8 md:grid-cols-2 md:gap-8 lg:grid-cols-4 lg:gap-16">
           <div>
             <h4 className="mb-6 text-xs font-bold tracking-widest text-white/30 uppercase">
               {t("contact")}
@@ -81,7 +33,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="relative"></div>
+          {!isMobile && <div className="relative"></div>}
           <div>
             <h4 className="mb-6 text-xs font-bold tracking-widest text-white/30 uppercase">
               {t("social")}
@@ -108,20 +60,36 @@ export default function Footer() {
             </h4>
             <ul className="space-y-4 text-sm font-medium text-slate-400">
               <li>
-                <a
+                <Link
                   href="/work"
                   className="transition-colors hover:text-cyan-400"
                 >
                   {t("work")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/about"
                   className="transition-colors hover:text-cyan-400"
                 >
                   {t("about")}
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="transition-colors hover:text-cyan-400"
+                >
+                  {t("contact")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/faq"
+                  className="transition-colors hover:text-cyan-400"
+                >
+                  {t("faq")}
+                </Link>
               </li>
             </ul>
           </div>
@@ -137,10 +105,10 @@ export default function Footer() {
         </div>
 
         <div className="mt-24 flex flex-col items-center justify-between gap-6 border-t border-white/5 pt-10 md:flex-row">
-          <span className="font-mono text-[10px] tracking-[0.3em] text-white/20 uppercase transition-colors hover:text-white">
+          <span className="text-[10px] tracking-[0.3em] text-white/20 uppercase transition-colors hover:text-white">
             © {currentYear} FOURLANTIS — ALL RIGHTS RESERVED.
           </span>
-          <div className="flex gap-8 font-mono text-[10px] tracking-[0.2em] text-white/20 uppercase">
+          <div className="flex gap-8 text-[10px] tracking-[0.2em] text-white/20 uppercase">
             <Link
               href="/privacy"
               className="cursor-pointer transition-colors hover:text-white"

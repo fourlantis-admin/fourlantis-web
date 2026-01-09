@@ -4,26 +4,32 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-default: var(--font-montserrat), "Montserrat", system-ui, sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-default);
   --font-mono: var(--font-geist-mono);
+
+  --font-montserrat: var(--font-default);
+  --font-syne: "Syne", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-default);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 @keyframes marquee {
   0% {
@@ -35,4 +41,26 @@ body {
 }
 .animate-marquee {
   animation: marquee 30s linear infinite;
+}
+/* globals.css */
+@layer base {
+  body {
+    cursor: none;
+  }
+
+  /* Linkler ve butonlar için de imleci gizle */
+  a,
+  button {
+    cursor: none;
+  }
+}
+
+/* Mobilde özel imleç sorun çıkarabileceği için 
+   dokunmatik cihazlarda standart imleci geri getirebiliriz */
+@media (hover: none) and (pointer: coarse) {
+  body,
+  a,
+  button {
+    cursor: auto;
+  }
 }

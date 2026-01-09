@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import LogoCloud from "@/components/LogoCloud";
 import About from "@/components/About";
@@ -6,7 +5,6 @@ import Services from "@/components/Services";
 import FeaturedWork from "@/components/FeaturedWork";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
 
 export default async function HomePage({
@@ -18,8 +16,6 @@ export default async function HomePage({
 
   return (
     <main className="flex min-h-screen flex-col">
-      <Navbar />
-
       <Hero />
 
       <FadeIn>
@@ -42,11 +38,9 @@ export default async function HomePage({
         <Testimonials />
       </FadeIn>
 
-      {/* <FadeIn>
+      <FadeIn>
         <CTA />
-      </FadeIn> */}
-
-      <Footer />
+      </FadeIn>
     </main>
   );
 }

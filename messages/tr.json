@@ -26,7 +26,6 @@
   },
   "Services": {
     "title": "Uçtan Uca Dijital Çözümler",
-    "subtitle": "HİZMETLERİMİZ",
     "webTitle": "Web Geliştirme",
     "webDesc": "Yüksek performanslı, SEO uyumlu ve modern web uygulamaları.",
     "mobileTitle": "Mobil Uygulama",
@@ -53,8 +52,7 @@
   },
   "FeaturedWork": {
     "title": "Projelerimiz.",
-    "subtitle": "Teknoloji ve tasarımı birleştirerek hayata geçirdiğimiz dijitalürünler.",
-    "eyebrow": "// Selected Works"
+    "subtitle": "Teknoloji ve tasarımı birleştirerek hayata geçirdiğimiz dijitalürünler."
   },
   "CTASection": {
     "title": "Bir sonraki başarı hikayesi sizin olsun.",
@@ -62,7 +60,6 @@
     "button": "Bizimle İletişime Geçin"
   },
   "Footer": {
-    "eyebrow": "// Next Step",
     "headlineStrong": "BİRLİKTE",
     "headlineLight": "ÜRETELİM.",
     "privacy": "Gizlilik Politikası",
@@ -72,7 +69,8 @@
     "social": "Sosyal",
     "navigation": "Navigasyon",
     "work": "Projeler",
-    "about": "Hakkımızda"
+    "about": "Hakkımızda",
+    "faq": "SSS"
   },
   "Contact": {
     "title": "Birlikte Harika Bir Şeyler Başlatalım.",
@@ -85,5 +83,18 @@
     "address": "Levent, İstanbul - Teknoloji Üssü",
     "email": "hello@fourlantis.com",
     "socialTitle": "Bizi Takip Edin"
+  },
+
+  "ServicesPage": {
+    "title": "HİZMETLER",
+    "webTitle": "Web Geliştirme",
+    "webDesc": "Performans odaklı, ölçeklenebilir ve modern Next.js mimarileriyle dijital varlığınızı inşa ediyoruz.",
+    "mobileTitle": "Mobil Çözümler",
+    "mobileDesc": "iOS ve Android platformlarında kesintisiz kullanıcı deneyimi sunan uygulamalar.",
+    "uiTitle": "UI/UX Tasarım",
+    "uiDesc": "Kullanıcıyı merkeze alan modern arayüz tasarımları.",
+    "growthTitle": "Growth Hacking",
+    "growthDesc": "Yazılımınızı doğru stratejilerle pazarda öne çıkarıyoruz.",
+    "longDescription": "Karmaşık problemleri, zarif ve performanslı yazılım çözümlerine dönüştürüyoruz."
   }
 }

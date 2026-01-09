@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import { useRef } from "react";
+import { useIsMobile } from "@/hooks/use-is-mobile";
 
 interface HighlightTextProps {
   text: string;
@@ -69,7 +70,7 @@ const ServiceCard = ({
   return (
     <div
       ref={containerRef}
-      className="sticky top-0 flex h-[80vh] items-center justify-center lg:h-screen"
+      className="sticky top-0 flex h-screen items-center justify-center md:h-[80vh]"
     >
       <motion.div
         style={{
@@ -83,13 +84,13 @@ const ServiceCard = ({
         <div className="relative z-10 flex h-full flex-col">
           <div className="flex-1">
             <div className="mb-8 flex items-center gap-4">
-              <span className="font-mono text-xs text-indigo-500">
+              <span className="text-xs font-semibold text-indigo-500">
                 0{index + 1}
               </span>
               <div className="h-px w-8 bg-indigo-500/30" />
             </div>
 
-            <h3 className="mb-6 text-3xl font-bold tracking-tighter text-white md:text-4xl">
+            <h3 className="mb-6 text-2xl font-semibold tracking-tighter text-white antialiased md:text-3xl lg:text-4xl">
               {service.title}
             </h3>
 
@@ -113,6 +114,7 @@ const ServiceCard = ({
 export default function Services() {
   const t = useTranslations("Services");
   const containerRef = useRef(null);
+  const isMobile = useIsMobile();
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -123,26 +125,22 @@ export default function Services() {
     {
       key: "web",
       title: t("webTitle"),
-      desc:
-        t("webDesc")
+      desc: t("webDesc"),
     },
     {
       key: "mobile",
       title: t("mobileTitle"),
-      desc:
-        t("mobileDesc")
+      desc: t("mobileDesc"),
     },
     {
       key: "ui",
       title: t("uiTitle"),
-      desc:
-        t("uiDesc")
+      desc: t("uiDesc"),
     },
     {
       key: "consulting",
-      title: t("consultingTitle") || "Tech Strategy",
-      desc:
-        t("consultingDesc")
+      title: t("consultingTitle"),
+      desc: t("consultingDesc"),
     },
   ];
 
@@ -154,48 +152,25 @@ export default function Services() {
         ref={containerRef}
         className="container mx-auto flex flex-col gap-8 px-6 lg:flex-row lg:gap-20"
       >
-        <div className="relative z-20 flex w-full flex-col justify-center py-20 lg:sticky lg:top-0 lg:h-screen lg:w-5/12">
-          <div className="max-w-md">
-            <motion.span
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              className="mb-6 block font-mono text-[10px] tracking-[0.5em] text-indigo-500 uppercase"
-            >
-              // {t("subtitle")}
-            </motion.span>
+        <div className="relative z-20 flex w-full flex-col justify-center pt-16 pb-0 md:pt-20 lg:sticky lg:top-0 lg:h-screen lg:w-6/12">
+          <h2 className="mb-12 text-5xl font-bold tracking-tighter md:text-6xl">
+            {t("title")}
+          </h2>
 
-            <h2 className="mb-12 text-5xl font-bold tracking-tighter md:text-6xl">
-              {t("title")}
-            </h2>
-
-            <div className="mb-12">
-              <div className="lg:hidden">
-                <HighlightText
-                  text={
-                    t("longDescription")
-                  }
-                />
-              </div>
-              <div className="hidden lg:block">
-                <HighlightText
-                  text={
-                    t("longDescription")
-                  }
-                  progress={scrollYProgress}
-                />
-              </div>
+          <div className="mb-12">
+            <div className="lg:hidden">
+              <HighlightText text={t("longDescription")} />
             </div>
-
-            {/* <button className="group relative hidden items-center gap-4 text-xs font-bold tracking-[0.2em] text-white lg:flex">
-              <span className="relative">
-                TÜM HİZMETLER
-                <span className="absolute -bottom-2 left-0 h-[1px] w-full bg-white/20 transition-all group-hover:bg-indigo-500" />
-              </span>
-            </button> */}
+            <div className="hidden lg:block">
+              <HighlightText
+                text={t("longDescription")}
+                progress={scrollYProgress}
+              />
+            </div>
           </div>
         </div>
 
-        <div className="w-full lg:w-7/12">
+        <div className="w-full lg:w-6/12">
           {services.map((service, index) => {
             const targetScale = 1 - (services.length - index) * 0.04;
             return (

@@ -54,13 +54,10 @@ export default function FeaturedWork() {
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div
           style={{ x }}
-          className={`${isMobile ? "flex gap-12" : "flex gap-12 px-10 md:gap-20 md:px-20"}`}
+          className={`${isMobile ? "flex gap-20 pr-80" : "flex gap-12 md:gap-40"}`}
         >
           <div className="flex w-[300px] flex-col justify-center md:w-[500px]">
-            <span className="mb-4 font-mono text-[10px] tracking-[0.5em] text-indigo-500 uppercase">
-              {t("eyebrow")}
-            </span>
-            <h2 className="text-6xl font-bold tracking-tighter text-white md:text-8xl">
+            <h2 className="text-5xl font-bold tracking-tighter text-white md:text-8xl">
               {t("title")}
             </h2>
             <p className="mt-8 max-w-sm text-white/40">{t("subtitle")}</p>
@@ -79,7 +76,7 @@ export default function FeaturedWork() {
                 className="border border-white/10"
               />
 
-              <div className="pointer-events-none absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/20 to-transparent p-8 opacity-100 transition-opacity duration-500 md:p-12">
+              <div className="rounded-4x pointer-events-none absolute inset-0 flex flex-col justify-end p-8 opacity-100 transition-opacity duration-500 md:p-12">
                 <h3 className="relative z-10 text-3xl font-bold tracking-tighter text-white md:text-5xl">
                   {project.title}
                 </h3>

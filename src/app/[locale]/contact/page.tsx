@@ -1,132 +1,135 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import FadeIn from "@/components/FadeIn";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+import { Mail, MessageSquare, MapPin, Send } from "lucide-react";
 
 export default function ContactPage() {
-  const t = useTranslations("Contact");
+  const t = useTranslations("ContactPage");
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as const },
+    },
+  };
 
   return (
-    <main className="flex min-h-screen flex-col bg-slate-950 text-white">
-      <Navbar />
+    <main className="relative z-10 min-h-screen px-6 pt-40 pb-24 text-white selection:bg-cyan-500/30">
+      <div className="pointer-events-none fixed inset-0 z-0">
+        <div className="absolute top-[-10%] right-[-5%] h-[40%] w-[40%] rounded-full bg-cyan-500/[0.05] blur-[120px]" />
+        <div className="absolute bottom-[10%] left-[-5%] h-[30%] w-[30%] rounded-full bg-indigo-500/[0.05] blur-[100px]" />
+      </div>
 
-      <section className="relative flex-grow overflow-hidden px-6 pt-32 pb-20 md:px-12">
-        <div className="pointer-events-none absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-blue-600/10 blur-[150px]" />
+      <div className="relative z-10 container mx-auto">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-24">
+          <div className="lg:col-span-5">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <h1 className="mb-10 text-5xl leading-[0.9] font-semibold tracking-tighter antialiased md:text-8xl">
+                HADİ <br /> KONUŞALIM<span className="text-cyan-500">.</span>
+              </h1>
+              <p className="mb-16 max-w-sm text-xl leading-relaxed font-light text-slate-400">
+                Yeni bir proje fikriniz mi var? Ya da sadece merhaba demek mi
+                istiyorsunuz? Sizi dinlemek için buradayız.
+              </p>
 
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-20 lg:grid-cols-2">
-          <FadeIn>
-            <h1 className="mb-8 text-5xl leading-tight font-bold tracking-tight md:text-7xl">
-              {t("title")}
-            </h1>
-            <p className="mb-12 max-w-lg text-xl text-slate-400">
-              {t("subtitle")}
-            </p>
+              <div className="space-y-10">
+                <div className="group flex items-start gap-6">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 text-cyan-400 transition-all group-hover:bg-cyan-400 group-hover:text-black">
+                    <Mail size={20} />
+                  </div>
+                  <div>
+                    <h4 className="mb-1 text-xs font-bold tracking-widest text-white/30 uppercase">
+                      E-Posta
+                    </h4>
+                    <p className="text-xl font-medium">hello@fourlantis.com</p>
+                  </div>
+                </div>
 
-            <div className="space-y-8">
-              <div>
-                <h3 className="mb-2 text-sm font-semibold tracking-wider text-blue-500 uppercase">
-                  {t("infoTitle")}
-                </h3>
-                <p className="cursor-pointer text-2xl font-light transition-colors hover:text-blue-400">
-                  {t("email")}
-                </p>
-                <p className="mt-2 text-lg text-slate-500">{t("address")}</p>
-              </div>
-
-              <div>
-                <h3 className="mb-4 text-sm font-semibold tracking-wider text-blue-500 uppercase">
-                  {t("socialTitle")}
-                </h3>
-                <div className="flex gap-4">
-                  {["Twitter", "LinkedIn", "Instagram", "GitHub"].map(
-                    (social) => (
-                      <a
-                        key={social}
-                        href="#"
-                        className="rounded-full border border-slate-800 px-4 py-2 text-sm text-slate-400 transition-all hover:bg-slate-800 hover:text-white"
-                      >
-                        {social}
-                      </a>
-                    ),
-                  )}
+                <div className="group flex items-start gap-6">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 text-cyan-400 transition-all group-hover:bg-cyan-400 group-hover:text-black">
+                    <MapPin size={20} />
+                  </div>
+                  <div>
+                    <h4 className="mb-1 text-xs font-bold tracking-widest text-white/30 uppercase">
+                      Lokasyon
+                    </h4>
+                    <p className="text-xl font-medium">Istanbul, Turkey</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </FadeIn>
+            </motion.div>
+          </div>
 
-          <FadeIn
-            delay={0.2}
-            className="rounded-3xl border border-white/5 bg-slate-900/30 p-8 backdrop-blur-sm md:p-12"
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="rounded-[3rem] border border-white/5 bg-white/[0.02] p-8 backdrop-blur-sm md:p-16 lg:col-span-7"
           >
-            <form className="space-y-12">
-              <div className="group relative">
+            <form className="grid grid-cols-1 gap-x-12 gap-y-12 md:grid-cols-2">
+              <motion.div variants={itemVariants} className="group relative">
                 <input
                   type="text"
-                  id="name"
-                  required
-                  className="peer w-full border-b border-slate-700 bg-transparent py-4 text-xl text-white placeholder-transparent transition-colors outline-none focus:border-blue-500"
-                  placeholder={t("nameLabel")}
+                  placeholder="İsim & Soyisim"
+                  className="w-full border-b border-white/10 bg-transparent py-4 text-lg font-light transition-colors placeholder:text-white/10 focus:border-cyan-400 focus:outline-none"
                 />
-                <label
-                  htmlFor="name"
-                  className="absolute top-4 left-0 text-xl text-slate-500 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-xl peer-placeholder-shown:text-slate-500 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-blue-500"
-                >
-                  {t("nameLabel")}
-                </label>
-              </div>
+              </motion.div>
 
-              <div className="group relative">
+              <motion.div variants={itemVariants} className="group relative">
                 <input
                   type="email"
-                  id="email"
-                  required
-                  className="peer w-full border-b border-slate-700 bg-transparent py-4 text-xl text-white placeholder-transparent transition-colors outline-none focus:border-blue-500"
-                  placeholder={t("emailLabel")}
+                  placeholder="E-Posta Adresi"
+                  className="w-full border-b border-white/10 bg-transparent py-4 text-lg font-light transition-colors placeholder:text-white/10 focus:border-cyan-400 focus:outline-none"
                 />
-                <label
-                  htmlFor="email"
-                  className="absolute top-4 left-0 text-xl text-slate-500 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-xl peer-placeholder-shown:text-slate-500 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-blue-500"
-                >
-                  {t("emailLabel")}
-                </label>
-              </div>
+              </motion.div>
 
-              <div className="group relative">
+              <motion.div
+                variants={itemVariants}
+                className="group relative md:col-span-2"
+              ></motion.div>
+
+              <motion.div
+                variants={itemVariants}
+                className="group relative md:col-span-2"
+              >
                 <textarea
-                  id="message"
                   rows={4}
-                  required
-                  className="peer w-full resize-none border-b border-slate-700 bg-transparent py-4 text-xl text-white placeholder-transparent transition-colors outline-none focus:border-blue-500"
-                  placeholder={t("messageLabel")}
+                  placeholder="Projenizden kısaca bahsedin..."
+                  className="w-full resize-none border-b border-white/10 bg-transparent py-4 text-lg font-light transition-colors placeholder:text-white/10 focus:border-cyan-400 focus:outline-none"
                 />
-                <label
-                  htmlFor="message"
-                  className="absolute top-4 left-0 text-xl text-slate-500 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-xl peer-placeholder-shown:text-slate-500 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-blue-500"
-                >
-                  {t("messageLabel")}
-                </label>
-              </div>
+              </motion.div>
 
-              <div className="pt-6">
+              <motion.div variants={itemVariants} className="md:col-span-2">
                 <button
                   type="submit"
-                  className="group relative inline-flex h-12 w-40 items-center justify-center overflow-hidden rounded-full bg-white px-8 font-medium text-black transition-all duration-300 hover:w-full hover:bg-slate-200"
+                  className="group relative flex items-center gap-4 rounded-full bg-cyan-500 px-10 py-5 text-xs font-bold tracking-[0.2em] text-black uppercase transition-all hover:scale-105 hover:bg-white active:scale-95"
                 >
-                  <span className="mr-2">{t("sendButton")}</span>
-                  <span className="-translate-x-2 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100">
-                    →
-                  </span>
+                  GÖNDER
+                  <Send
+                    size={16}
+                    className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                  />
                 </button>
-              </div>
+              </motion.div>
             </form>
-          </FadeIn>
+          </motion.div>
         </div>
-      </section>
-
-      <Footer />
+      </div>
     </main>
   );
 }

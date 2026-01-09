@@ -39,13 +39,6 @@ export default function Testimonials() {
 
       <div className="container mx-auto px-6">
         <div className="mb-24 text-center">
-          <motion.span
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            className="mb-4 block font-mono text-[10px] tracking-[0.5em] text-indigo-500 uppercase"
-          >
-            // SOCIAL PROOF
-          </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -101,7 +94,7 @@ export default function Testimonials() {
         </div>
       </div>
 
-      <div className="absolute -bottom-24 left-1/2 -z-10 h-[300px] w-[600px] -translate-x-1/2 rounded-full bg-indigo-500/10 blur-[120px]" />
+      {/* <div className="absolute -bottom-24 left-1/2 -z-10 h-[300px] w-[600px] -translate-x-1/2 rounded-full bg-indigo-500/10 blur-[120px]" /> */}
     </section>
   );
 }
